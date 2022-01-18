@@ -1,5 +1,7 @@
 <template>
 	<div class="container">
+		<n-button type="success" @click="spotify">Login with Spotify</n-button>
+
 		<!-- <button class="login" @click="spotify">Login with Spotify</button> -->
 	</div>
 </template>
@@ -20,17 +22,5 @@ export default {
 	justify-content: center;
 	align-items: center;
 	min-height: 80vh;
-}
-.login {
-	font-size: 30px;
-	background-color: aliceblue;
-	padding: 30px;
-	color: green;
-	border-radius: 6px;
-}
-
-.login:hover {
-	background-color: green;
-	color: aliceblue;
 }
 </style>

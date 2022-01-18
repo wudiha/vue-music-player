@@ -1,16 +1,56 @@
 <template>
-	<div>
-		<ul class="nav">
-			<li><router-link to="/" exact>Spotify</router-link></li>
-			<!-- <li><router-link to="/upcoming">Upcoming</router-link></li>
-			<li><router-link to="/upcoming">Upcoming</router-link></li> -->
-			<li><router-link to="/upcoming">Upcoming</router-link></li>
-		</ul>
-	</div>
+	<n-menu :options="menuOptions" />
 </template>
 
 <script>
-export default {};
-</script>
+import { defineComponent, h } from 'vue';
+import { NIcon } from 'naive-ui';
+import { RouterLink } from 'vue-router';
+import {
+	CodeWorkingOutline as WorkIcon,
+	MusicalNoteOutline as MusicIcon,
+} from '@vicons/ionicons5';
 
-<style></style>
+function renderIcon(icon) {
+	return () => h(NIcon, null, { default: () => h(icon) });
+}
+
+const menuOptions = [
+	{
+		label: () =>
+			h(
+				RouterLink,
+				{
+					to: {
+						name: 'Spotify',
+					},
+				},
+				{ default: () => 'Spotify' }
+			),
+		key: 'go-back-home',
+		icon: renderIcon(MusicIcon),
+	},
+	{
+		label: () =>
+			h(
+				RouterLink,
+				{
+					to: {
+						name: 'Upcoming',
+					},
+				},
+				{ default: () => 'Upcoming' }
+			),
+		key: 'go-to-work',
+		icon: renderIcon(WorkIcon),
+	},
+];
+
+export default defineComponent({
+	setup() {
+		return {
+			menuOptions,
+		};
+	},
+});
+</script>
