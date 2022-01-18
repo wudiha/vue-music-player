@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home';
+import Spotify from '../views/Spotify';
 import Layout from '../views/Layout.vue';
 
 const routes = [
@@ -10,23 +10,13 @@ const routes = [
 		children: [
 			{
 				path: '/',
-				name: 'Home',
-				component: Home,
+				name: 'Spotify',
+				component: Spotify,
 			},
 			{
-				path: '/list',
-				name: 'SongList',
-				component: () => import('../views/List.vue'),
-			},
-			{
-				path: '/profile',
-				name: 'Profile',
-				component: () => import('../views/Profile.vue'),
-			},
-			{
-				path: '/search',
-				name: 'Search',
-				component: () => import('../views/Search.vue'),
+				path: '/upcoming',
+				name: 'Upcoming',
+				component: () => import('../views/Upcoming.vue'),
 			},
 		],
 	},
