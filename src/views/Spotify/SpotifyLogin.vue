@@ -10,7 +10,7 @@ export default {
 		loginview,
 	},
 	created() {
-		this.$api.getMusicList().then((res) => console.log(res));
+		// this.$api.getMusicList().then((res) => console.log(res));
 	},
 };
 </script>

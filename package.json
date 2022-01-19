@@ -11,7 +11,9 @@
     "@vicons/ionicons5": "^0.11.0",
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "react": "^17.0.2",
     "vue": "^3.0.0",
+    "vue-hooks": "^0.3.2",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
