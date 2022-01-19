@@ -3,7 +3,7 @@ const api = require('spotify-web-api-node');
 const cors = require('cors');
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 app.get('/', function (req, res) {});
 app.post('/login', (req, res) => {
 	console.log('Server Login');
