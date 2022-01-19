@@ -45,7 +45,7 @@ export default {
 					console.log(res.data);
 				})
 				.catch(() => {
-					console.log('ERROR');
+					window.location = '/';
 				});
 		});
 		return {
