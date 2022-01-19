@@ -1,9 +1,12 @@
 const express = require('express');
 const api = require('spotify-web-api-node');
 const cors = require('cors');
+const bp = require('body-parser');
 
 const app = express();
 app.use(cors());
+app.use(bp.json());
+
 app.get('/', function (req, res) {});
 app.post('/login', (req, res) => {
 	console.log('Server Login');
